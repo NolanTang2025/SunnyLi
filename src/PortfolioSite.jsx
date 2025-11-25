@@ -1,15 +1,6 @@
 export default function PortfolioSite() {
-  // 获取 BASE_URL，确保以 / 结尾
-  const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-    ? import.meta.env.BASE_URL 
-    : import.meta.env.BASE_URL + '/';
-  
-  // 辅助函数：获取图片路径
-  const getImagePath = (path) => {
-    // 移除路径开头的 /（如果有）
-    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-    return `${baseUrl}${cleanPath}`;
-  };
+  // 获取 base URL，适配 GitHub Pages
+  const baseUrl = import.meta.env.BASE_URL;
   
   return (
     <div className="min-h-screen w-full bg-[#0f0f1a] text-white font-sans">
@@ -57,7 +48,7 @@ export default function PortfolioSite() {
           </div>
           <div className="w-full aspect-video rounded-2xl shadow-2xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10">
             <img 
-              src={getImagePath('images/hero/main-hero.jpg')} 
+              src={`${baseUrl}images/hero/main-hero.jpg`}
               alt="Hero Image" 
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -263,7 +254,7 @@ export default function PortfolioSite() {
             <div className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300">
               <div className="mb-4 aspect-[9/16] rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:border-purple-500/30 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                 <img 
-                  src={getImagePath('images/accounts/account-1-screenshot.jpg')} 
+                  src={`${baseUrl}images/accounts/account-1-screenshot.jpg`} 
                   alt="抖音账号截图" 
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -295,7 +286,7 @@ export default function PortfolioSite() {
             <div className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300">
               <div className="mb-4 aspect-[9/16] rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:border-purple-500/30 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                 <img 
-                  src={getImagePath('images/accounts/account-2-screenshot.jpg')} 
+                  src={`${baseUrl}images/accounts/account-2-screenshot.jpg`} 
                   alt="小红书账号截图" 
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -327,7 +318,7 @@ export default function PortfolioSite() {
             <div className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300">
               <div className="mb-4 aspect-[9/16] rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:border-purple-500/30 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                 <img 
-                  src={getImagePath('images/accounts/account-3-screenshot.jpg')} 
+                  src={`${baseUrl}images/accounts/account-3-screenshot.jpg`} 
                   alt="账号3截图" 
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -386,7 +377,7 @@ export default function PortfolioSite() {
           <div className="group cursor-pointer">
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
-                src={getImagePath('images/cases/case-a-thumbnail.jpg')} 
+                src={`${baseUrl}images/cases/case-a-thumbnail.jpg`} 
                 alt="短剧案例 A" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -400,7 +391,7 @@ export default function PortfolioSite() {
           <div className="group cursor-pointer">
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
-                src={getImagePath('images/cases/case-b-thumbnail.jpg')} 
+                src={`${baseUrl}images/cases/case-b-thumbnail.jpg`} 
                 alt="旅游正片案例 B" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -414,7 +405,7 @@ export default function PortfolioSite() {
           <div className="group cursor-pointer">
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
-                src={getImagePath('images/cases/case-c-thumbnail.jpg')} 
+                src={`${baseUrl}images/cases/case-c-thumbnail.jpg`} 
                 alt="案例 C" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -428,7 +419,7 @@ export default function PortfolioSite() {
           <div className="group cursor-pointer">
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
-                src={getImagePath('images/cases/case-d-thumbnail.jpg')} 
+                src={`${baseUrl}images/cases/case-d-thumbnail.jpg`} 
                 alt="案例 D" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -1001,7 +992,7 @@ export default function PortfolioSite() {
               {/* 第一组 */}
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-1-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-1-logo.png`} 
                   alt="Brand 1" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1011,7 +1002,7 @@ export default function PortfolioSite() {
               </div>
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-2-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-2-logo.png`} 
                   alt="Brand 2" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1021,7 +1012,7 @@ export default function PortfolioSite() {
               </div>
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-3-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-3-logo.png`} 
                   alt="Brand 3" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1032,7 +1023,7 @@ export default function PortfolioSite() {
               {/* 第二组（用于无缝循环） */}
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-1-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-1-logo.png`} 
                   alt="Brand 1" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1042,7 +1033,7 @@ export default function PortfolioSite() {
               </div>
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-2-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-2-logo.png`} 
                   alt="Brand 2" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1052,7 +1043,7 @@ export default function PortfolioSite() {
               </div>
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-3-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-3-logo.png`} 
                   alt="Brand 3" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1063,7 +1054,7 @@ export default function PortfolioSite() {
               {/* 第三组（确保无缝循环） */}
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-1-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-1-logo.png`} 
                   alt="Brand 1" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1073,7 +1064,7 @@ export default function PortfolioSite() {
               </div>
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-2-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-2-logo.png`} 
                   alt="Brand 2" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -1083,7 +1074,7 @@ export default function PortfolioSite() {
               </div>
               <div className="h-32 w-48 flex-shrink-0 bg-purple-500/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm border border-purple-500/30 hover:border-purple-400/50 transition-all duration-200">
                 <img 
-                  src={getImagePath('images/brands/brand-3-logo.png')} 
+                  src={`${baseUrl}images/brands/brand-3-logo.png`} 
                   alt="Brand 3" 
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
