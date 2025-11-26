@@ -250,8 +250,13 @@ export default function PortfolioSite() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 账号1 - 抖音主账号 */}
-            <div className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300">
+            {/* 账号1 - 小红书主账号 */}
+            <a 
+              href="https://www.xiaohongshu.com/user/profile/5a7a9c924eacab4bb9aa541d?xsec_token=YBYZTPhsO7Nz0bYZip7hinbMdcNBEMJkVgJgOasbg2w3A=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=N0k5RjpHOEE2NzUyOTgwNjc0OTc6NzY6&apptime=1764132036&share_id=d1381bd13c574cf88effbc2cad95397c" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300 block"
+            >
               <div className="mb-4 aspect-[9/16] rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:border-purple-500/30 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                 <img 
                   src={`${baseUrl}images/accounts/account-1-screenshot.jpg`} 
@@ -280,10 +285,15 @@ export default function PortfolioSite() {
                 </div>
                 <p className="text-xs opacity-70 line-clamp-2 leading-relaxed">ACGN垂类内容创作，角色世界观设定与视觉化呈现，系列化短剧矩阵运营</p>
               </div>
-            </div>
+            </a>
 
-            {/* 账号2 - 小红书账号 */}
-            <div className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300">
+            {/* 账号2 - 快手账号 */}
+            <a 
+              href="https://v.kuaishou.com/KJF5M56R" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300 block"
+            >
               <div className="mb-4 aspect-[9/16] rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:border-purple-500/30 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                 <img 
                   src={`${baseUrl}images/accounts/account-2-screenshot.jpg`} 
@@ -312,10 +322,15 @@ export default function PortfolioSite() {
                 </div>
                 <p className="text-xs opacity-70 line-clamp-2 leading-relaxed">表现超77%同类账号，图文内容策划与IP衍生品种草，用户增长与商业化闭环</p>
               </div>
-            </div>
+            </a>
 
-            {/* 账号3 - 其他平台账号 */}
-            <div className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300">
+            {/* 账号3 - 抖音账号 */}
+            <a 
+              href="https://www.douyin.com/user/MS4wLjABAAAAQIvjswkRpC2Q5uFMscVy-BAG1Us1EZrxMDdpbplawdM?from_tab_name=main" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group p-6 bg-gradient-to-br from-white/5 to-white/2 rounded-xl border border-white/10 hover:border-purple-500/40 hover:bg-white/10 transition-all duration-300 block"
+            >
               <div className="mb-4 aspect-[9/16] rounded-lg overflow-hidden bg-white/5 border border-white/10 group-hover:border-purple-500/30 group-hover:shadow-lg transition-all duration-300 flex items-center justify-center">
                 <img 
                   src={`${baseUrl}images/accounts/account-3-screenshot.jpg`} 
@@ -344,7 +359,7 @@ export default function PortfolioSite() {
                 </div>
                 <p className="text-xs opacity-70 line-clamp-2 leading-relaxed">多平台内容分发与矩阵运营，轻量级涨粉内容与系列化IP内容打造</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -374,62 +389,82 @@ export default function PortfolioSite() {
       <section id="cases" className="px-10 py-24 border-t border-purple-500/20">
         <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent">Case Studies</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          <div className="group cursor-pointer">
+          <a 
+            href="https://v.douyin.com/BJcNaMOolEE" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group cursor-pointer block"
+          >
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
                 src={`${baseUrl}images/cases/case-a-thumbnail.jpg`} 
-                alt="短剧案例 A" 
+                alt="原创短剧案例" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
             </div>
-            <h3 className="text-lg font-semibold mb-1 text-purple-300">短剧案例 A</h3>
-            <p className="text-sm opacity-70 line-clamp-2">背景、策略、脚本、执行、数据与复盘说明区块。</p>
-          </div>
-          <div className="group cursor-pointer">
+            <h3 className="text-lg font-semibold mb-1 text-purple-300">原创短剧案例</h3>
+            <p className="text-sm opacity-70 line-clamp-2">角色世界观设定+反转脚本，矩阵化运营实现近40W+播放。</p>
+          </a>
+          <a 
+            href="https://v.douyin.com/FNtYNIZm9xg/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group cursor-pointer block"
+          >
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
                 src={`${baseUrl}images/cases/case-b-thumbnail.jpg`} 
-                alt="旅游正片案例 B" 
+                alt="垂类赛道品牌合作案例（千岛）" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
             </div>
-            <h3 className="text-lg font-semibold mb-1 text-purple-300">旅游正片案例 B</h3>
-            <p className="text-sm opacity-70 line-clamp-2">人设结合旅拍叙事的视觉内容案例。</p>
-          </div>
-          <div className="group cursor-pointer">
+            <h3 className="text-lg font-semibold mb-1 text-purple-300">垂类赛道品牌合作案例（千岛）</h3>
+            <p className="text-sm opacity-70 line-clamp-2">与千岛平台合作，内容点赞超行业均值14%，转化率提升28%。</p>
+          </a>
+          <a 
+            href="https://v.douyin.com/xvsOfF67weU" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group cursor-pointer block"
+          >
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
                 src={`${baseUrl}images/cases/case-c-thumbnail.jpg`} 
-                alt="案例 C" 
+                alt="NYC旅游作品案例" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
             </div>
-            <h3 className="text-lg font-semibold mb-1 text-purple-300">案例 C</h3>
-            <p className="text-sm opacity-70 line-clamp-2">案例描述和亮点说明。</p>
-          </div>
-          <div className="group cursor-pointer">
+            <h3 className="text-lg font-semibold mb-1 text-purple-300">NYC旅游作品案例</h3>
+            <p className="text-sm opacity-70 line-clamp-2">人设+旅拍叙事，全流程把控实现高互动率与用户共鸣。</p>
+          </a>
+          <a 
+            href="https://v.douyin.com/QdzWVqFcmFs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group cursor-pointer block"
+          >
             <div className="mb-3 w-full rounded-xl overflow-hidden bg-purple-500/10 aspect-[9/16] shadow-lg border border-purple-500/30 transition-all duration-300 group-hover:scale-105 group-hover:border-purple-400/50 purple-glow-hover">
               <img 
                 src={`${baseUrl}images/cases/case-d-thumbnail.jpg`} 
-                alt="案例 D" 
+                alt="创意类作品案例" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
             </div>
-            <h3 className="text-lg font-semibold mb-1 text-purple-300">案例 D</h3>
-            <p className="text-sm opacity-70 line-clamp-2">案例描述和亮点说明。</p>
-          </div>
+            <h3 className="text-lg font-semibold mb-1 text-purple-300">创意类作品案例</h3>
+            <p className="text-sm opacity-70 line-clamp-2">创新视觉形式+人设结合，热点捕捉打造高传播度内容。</p>
+          </a>
         </div>
       </section>
 
